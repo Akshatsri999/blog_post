@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session, f
 from flask_sqlalchemy import SQLAlchemy
 from cryptography.fernet import Fernet
 from werkzeug.utils import secure_filename
-from datetime import datetime;
+from datetime import datetime
 import os
 
 app = Flask(__name__)
@@ -12,7 +12,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 app.secret_key = 'qwertyuixcvbnm'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/two_database'
-app.config['UPLOAD_FOLDER'] = "C:\\Users\\suraj\\OneDrive\Documents\\Development\project\\blog_post\static\\img"
+app.config['UPLOAD_FOLDER'] = "C:\\Users\\aksha\\Documents\\Projects\\blog_post\\static\\img"
 
 image = os.path.join('/static/','img')
 
